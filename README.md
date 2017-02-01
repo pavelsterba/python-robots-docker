@@ -11,7 +11,7 @@ slackclient==1.0.2
 Another important file is `crontab`, in same directory as requirements.txt. Use full path for Python 3.5 and note that your robots will be stored in `/robots` directory in running container. If you want to see output of your robots, log it into `/var/log/robots.log` file:
 
 ```
-* * * * * /usr/local/bin/python3.5 /robots/my_robot.py >> /var/log/robots.log 2>&1
+* * * * * /usr/bin/python3.5 /robots/my_robot.py >> /var/log/robots.log 2>&1
 ```
 
 `robots.log` will also be outputed into container logs (accessible via `docker logs [id]`).
